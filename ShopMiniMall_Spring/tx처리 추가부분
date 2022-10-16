@@ -1,0 +1,6 @@
+<!-- transaction의 시작 -->	
+	<bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+	<tx:annotation-driven transaction-manager="txManager"/>
+<!-- transaction 처리 종료 -->	
